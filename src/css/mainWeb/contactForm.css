@@ -122,17 +122,6 @@
     background-color: indianred;
 }
 
-@media only screen and (max-width: 800px) {
-    #home #ifcontacto .text-inputs,
-    #home #ifcontacto .message-input .cajagr,
-    #home #ifcontacto .button-send-container,
-    #home #ifcontacto .name-input .cajagr,
-    #home #ifcontacto .email-input .cajagr {
-        width: 80%;
-        margin: 5px 0;
-    }
-}
-
 @media only screen and (max-width: 1200px) {
     #home #ifcontacto .button-send-container {
         justify-content: center;
@@ -140,26 +129,15 @@
     #home #ifcontacto .text-inputs,
     #home #ifcontacto .message-input .cajagr,
     #home #ifcontacto .button-send-container {
-        width: 700px;
+        width: 80%;
         margin: 5px 0;
     }
     #home #ifcontacto .name-input .cajagr,
     #home #ifcontacto .email-input .cajagr {
-        width: 340px;
+        width: 90%;
     }
     #home #ifcontacto .email-input .cajagr {
         margin-left: 20px;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    #home #ifcontacto .text-inputs,
-    #home #ifcontacto .message-input .cajagr,
-    #home #ifcontacto .button-send-container,
-    #home #ifcontacto .name-input .cajagr,
-    #home #ifcontacto .email-input .cajagr {
-        width: 100%;
-        margin: 5px 0;
     }
 }
 
