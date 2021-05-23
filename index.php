@@ -19,8 +19,11 @@ require "src/php/functions.php"
     <img class="lazyload" data-src="assets/images/logo-company.png">
         <div class="contacto">
             <a href="#ifcontacto">Contacto</a>
+        </div>
+        <div class="menu-mobile">
             <i class="fas fa-bars"></i>
         </div>
+        
     </header>
     <div id="home">
         <div class="section">

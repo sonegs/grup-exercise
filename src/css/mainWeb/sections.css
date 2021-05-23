@@ -83,7 +83,7 @@
             /* Contenedores de texto */
             /* Primer contenedor de texto */
             
-            #home .section:nth-child(2) .container:nth-child(1) {
+            #home #mobile-slider .section:nth-child(2) .container:nth-child(1) {
                 padding: 0
             }
             
@@ -228,6 +228,20 @@
                 }
                 #home .section:nth-child(2) .container:nth-child(1) .row .img-container {
                     display: none
+                }
+                #mobile-slider {
+                    width: 500px;
+                    height: 350px;
+                    overflow: hidden;
+                }
+                #mobile-slider div {
+                    height: 350px;
+                    transition: all 1s
+                }
+                #mobile-slider>div {
+                    width: 2500px;
+                    height: 350px;
+                    transition: all 1s
                 }
             }
             /* Fin de los contenedores de texto */

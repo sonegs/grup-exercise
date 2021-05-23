@@ -1,48 +1,62 @@
-/* Header */
-
-header {
-    background-color: #58517a;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-header .contacto {
-    padding: 10px;
-    justify-self: right;
-    transition: .1s;
-    align-self: center;
-    font-size: 21px;
-}
-
-header .contacto:hover {
-    margin-top: -8px
-}
-
-header .title,
-header .contacto a,
-header .contacto a:active,
-header .contacto a:visited {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 700px) {
-    header i {
-        display: none;
+    /* Header */
+    
+    header {
+        background-color: #58517a;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    header a {
-        display: block;
+    
+    header .contacto {
+        padding: 10px;
+        justify-self: right;
+        transition: .1s;
+        align-self: center;
+        font-size: 21px;
     }
-}
-
-@media only screen and (max-width: 480px) {
-    header i {
-        display: block;
+    
+    header .contacto:hover {
+        margin-top: -8px
+    }
+    
+    header .title,
+    header .contacto a,
+    header .contacto a:active,
+    header .contacto a:visited {
         color: whitesmoke;
-        font-size: 40px
+        text-decoration: none;
     }
-    header a {
+    
+    header .menu-mobile {
         display: none;
     }
-}
+    
+    header .contacto {
+        display: block;
+    }
+    
+    @media only screen and (max-width: 480px) {
+        header .menu-mobile {
+            display: block;
+            color: whitesmoke;
+            font-size: 40px;
+            justify-self: right;
+            padding-right: 10px;
+        }
+        header .contacto {
+            display: none;
+        }
+        #rowMobile {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: #d8d4ec;
+            position: absolute;
+            border-bottom: 1px solid #c0b3ff;
+        }
+        #rowMobile a {
+            text-decoration: none;
+            padding-left: 10px
+        }
+    }
