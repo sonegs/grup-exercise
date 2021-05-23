@@ -1,5 +1,9 @@
 /* Formulario de contacto*/
 
+#home .section:nth-child(4) .container {
+    padding-bottom: 0
+}
+
 #home .section:nth-child(4) .container .row {
     grid-template-columns: 1fr;
     min-height: 400px;
@@ -58,20 +62,15 @@
     font-size: 22px;
     line-height: 40px;
     color: #b8b8b8;
-    overflow-wrap: break-word
 }
 
 #home #ifcontacto .button-send-container {
-    width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#error_validacion_email,
-#error_validacion_lopd,
-#error_validacion_name,
-#error_validacion_message {
+#error_validacion {
     background-color: indianred;
     color: white;
     border-radius: 5px;
@@ -123,8 +122,100 @@
     background-color: indianred;
 }
 
-@media only screen and (min-width: 200px) {}
+@media only screen and (max-width: 800px) {
+    #home #ifcontacto .text-inputs,
+    #home #ifcontacto .message-input .cajagr,
+    #home #ifcontacto .button-send-container,
+    #home #ifcontacto .name-input .cajagr,
+    #home #ifcontacto .email-input .cajagr {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
 
-@media only screen and (min-width: 800px) {}
+@media only screen and (max-width: 1200px) {
+    #home #ifcontacto .button-send-container {
+        justify-content: center;
+    }
+    #home #ifcontacto .text-inputs,
+    #home #ifcontacto .message-input .cajagr,
+    #home #ifcontacto .button-send-container {
+        width: 700px;
+        margin: 5px 0;
+    }
+    #home #ifcontacto .name-input .cajagr,
+    #home #ifcontacto .email-input .cajagr {
+        width: 340px;
+    }
+    #home #ifcontacto .email-input .cajagr {
+        margin-left: 20px;
+    }
+}
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (max-width: 700px) {
+    #home #ifcontacto .text-inputs,
+    #home #ifcontacto .message-input .cajagr,
+    #home #ifcontacto .button-send-container,
+    #home #ifcontacto .name-input .cajagr,
+    #home #ifcontacto .email-input .cajagr {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #home #ifcontacto {
+        padding: 0px 20px 30px 20px;
+        grid-template-rows: .5fr .3fr .5fr 1fr .1fr;
+    }
+    #home #ifcontacto .titulo {
+        font-size: 25px;
+    }
+    #home #ifcontacto .frase {
+        font-size: 18px;
+        margin-top: 10px
+    }
+    #home #ifcontacto .text-inputs,
+    #home #ifcontacto .message-input .cajagr,
+    #home #ifcontacto .button-send-container,
+    #home #ifcontacto .name-input .cajagr,
+    #home #ifcontacto .email-input .cajagr {
+        width: 100%;
+        margin: 5px 0;
+    }
+    #home #ifcontacto .text-inputs {
+        flex-direction: column;
+    }
+    #home #ifcontacto .name-input .cajagr,
+    #home #ifcontacto .email-input .cajagr,
+    #home #ifcontacto .name-input .cajagr::placeholder,
+    #home #ifcontacto .email-input .cajagr::placeholder,
+    #home #ifcontacto .message-input .cajagr,
+    #home #ifcontacto .message-input .cajagr::placeholder {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #home #ifcontacto span {
+        font-size: 14px;
+        padding-left: 0px
+    }
+    #home #ifcontacto .checkbox {
+        display: grid;
+        grid-template-columns: .1fr 1fr;
+    }
+    #home #ifcontacto .checkbox .validate-rgpd {
+        width: 14px;
+        height: 14px;
+    }
+    #home #ifcontacto .button-send-container {
+        flex-direction: column;
+    }
+    #ibenviar {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    #home #ifcontacto span#error_validacion {
+        margin: 10px 0;
+        padding-left: 10px
+    }
+}

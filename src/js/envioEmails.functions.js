@@ -9,10 +9,10 @@ let error_message_visible = false;
 const mensajeError = (mensaje, validado) => { // Creamos un mensaje de error e indica que el campo no está validado
     const span = document.createElement('span');
     const button = document.getElementById('ibenviar');
-    span.id = "error_validacion_email";
+    span.id = "error_validacion";
     span.innerHTML = mensaje;
     button.after(span);
-    fadeoutEffect.fadeOut(document.getElementById('error_validacion_email'), { duration: 5000 }); // Lo hacemos aparecer con el objeto fadeoutEffect
+    fadeoutEffect.fadeOut(document.getElementById('error_validacion'), { duration: 5000 }); // Lo hacemos aparecer con el objeto fadeoutEffect
     validado = false;
     return validado;
 }

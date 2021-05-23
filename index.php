@@ -9,8 +9,8 @@ require "src/php/functions.php"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/styles.css">
     <link href="./assets/vendor/fontawesome/css/iconos-footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/styles.css">
     
     <title>Miguel Cobo Exercise</title>
 </head>
@@ -19,6 +19,7 @@ require "src/php/functions.php"
     <img class="lazyload" data-src="assets/images/logo-company.png">
         <div class="contacto">
             <a href="#ifcontacto">Contacto</a>
+            <i class="fas fa-bars"></i>
         </div>
     </header>
     <div id="home">
@@ -101,44 +102,44 @@ require "src/php/functions.php"
                 </div>    
             </div>
         </div>
-            <div class="section">
-                <div class="container">
-                    <div class="row">
-                        <form id="ifcontacto" name="fcontacto" method="post">
-                            <div class="titulo">Formulario de Contacto</div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <form id="ifcontacto" name="fcontacto" method="post">
+                        <div class="titulo">Formulario de Contacto</div>
                             
-                            <div class="frase">Indícanos tu dirección de correo electrónico</div>
-                            <div class="text-inputs">
-                                <div class="name-input">
-                                    <input class="cajagr" placeholder="Escribe aquí tu nombre" id="nombre" name="nombre" type="text" />
-                                </div>
-                                <div class="email-input">
-                                    <input class="cajagr valida-email" placeholder="Escribe aquí tu email" id="iemail" name="email" type="text" />
-                                </div>
+                        <div class="frase">Indícanos tu dirección de correo electrónico</div>
+                        <div class="text-inputs">
+                            <div class="name-input">
+                                <input class="cajagr" placeholder="Escribe aquí tu nombre" id="nombre" name="nombre" type="text" />
                             </div>
-                            <div class="message-input">
-                                <textarea class="cajagr" placeholder="Envíanos tu consulta..." id="message" name="message" ></textarea>
+                            <div class="email-input">
+                                <input class="cajagr valida-email" placeholder="Escribe aquí tu email" id="iemail" name="email" type="text" />
                             </div>
-                            <div class="button-send-container">
-                                <div class="checkbox">
-                                    <input class="validate-rgpd" value="1" type="checkbox" id="ilopd" name="aceptar" />
-                                    <span id="span-lopd">Estoy conforme con el Acuerdo de Procesamiento de Datos (RGPD)</span>
-                                </div>
-                                <div id="ibenviar">Recibir en mi email</div>
-                            </div>
+                        </div>
+                        <div class="message-input">
+                            <textarea class="cajagr" placeholder="Envíanos tu consulta..." id="message" name="message" ></textarea>
+                        </div>
+                        <div class="checkbox">
+                            <input class="validate-rgpd" value="1" type="checkbox" id="ilopd" name="aceptar" />
+                            <span id="span-lopd">Estoy conforme con el Acuerdo de Procesamiento de Datos (RGPD)</span>
+                        </div>
+                        <div class="button-send-container">
+                            <div id="ibenviar">Recibir en mi email</div>
+                        </div>
                             
-                        </form>
-                    </div>
-                    <div id="icorrecto">
-                        <p class="send-message">El email se ha enviado correctamente. Por favor, revisa la bandeja de entrada o la lista de correo no deseado.</p>
-                    </div>
-                    <div id="ierror">
-                        <p class="error-message">Ha habido un problema al enviar el email Por favor, inténtenlo de nuevo.</p>
-                    </div>
+                    </form>
+                </div>
+                <div id="icorrecto">
+                    <p class="send-message">El email se ha enviado correctamente. Por favor, revisa la bandeja de entrada o la lista de correo no deseado.</p>
+                </div>
+                <div id="ierror">
+                    <p class="error-message">Ha habido un problema al enviar el email Por favor, inténtenlo de nuevo.</p>
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <div class="container">
             <div class="text-paragraph">
