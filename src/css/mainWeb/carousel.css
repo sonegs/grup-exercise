@@ -1,89 +1,93 @@
-/* Contenedor carousel*/
-
-#home .section:nth-child(3) .container .row {
-    background-color: white;
-    grid-template-columns: 1fr .6fr;
-}
-
-#home .section:nth-child(3) .container .row .text-paragraph,
-#home .section:nth-child(3) .container .row .img-container {
-    align-self: center;
-}
-
-#home .section:nth-child(3) .container .row .text-paragraph .text h2 {
-    font-size: 35px;
-    text-align: center;
-    font-weight: 400;
-    padding: 5px 0
-}
-
-#home .section:nth-child(3) .container .row .text-paragraph {
-    grid-column-start: 1;
-    padding: 30px;
-    text-align: center;
-}
-
-#home .section:nth-child(3) .container .row .img-container {
-    justify-self: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: .2s;
-}
-
-#home .section:nth-child(3) .container .row .img-container:hover {
-    margin-top: -10px
-}
-
-#slider {
-    width: 500px;
-    height: 350px;
-    overflow: hidden;
-}
-
-#slider div {
-    height: 350px;
-    transition: all 1s
-}
-
-#slider>div {
-    width: 2500px;
-    height: 350px;
-    transition: all 1s
-}
-
-#slider>div>div.img-carousel {
-    width: 500px;
-    float: left;
-    height: 350px;
-    border-radius: 5px;
-}
-
-#slider .img-carousel:nth-child(1) {
-    background: url('../../../assets/images/carousel/01.jpg') no-repeat;
-    background-size: cover;
-}
-
-#slider .img-carousel:nth-child(2) {
-    background: url('../../../assets/images/carousel/02.jpg') no-repeat;
-    background-size: cover;
-}
-
-#slider .img-carousel:nth-child(3) {
-    background: url('../../../assets/images/carousel/03.jpg') no-repeat;
-    background-size: cover;
-}
-
-#slider .img-carousel:nth-child(4) {
-    background: url('../../../assets/images/carousel/04.jpg') no-repeat;
-    background-size: cover;
-}
-
-#slider .img-carousel:nth-child(5) {
-    background: url('../../../assets/images/carousel/05.jpg') no-repeat;
-    background-size: cover;
-}
-
-@media only screen and (max-width: 700px) {
-    #home .section:nth-child(3) {
-        display: none;
+    /* Contenedor carousel*/
+    
+    #home .carouseldesktop-section .container .row {
+        background-color: white;
+        grid-template-columns: 1fr .6fr;
     }
-}
+    
+    #home .carouseldesktop-section .container .row .text-paragraph:first-child {
+        grid-column-start: 1;
+    }
+    
+    #home .carouseldesktop-section .container .row .text-paragraph,
+    #home .carouseldesktop-section .container .row .img-container {
+        align-self: center;
+    }
+    
+    #home .carouseldesktop-section .container .row .text-paragraph .text h2 {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 400;
+        padding: 5px 0
+    }
+    
+    #home .carouseldesktop-section .container .row .text-paragraph {
+        grid-column-start: 1;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    #home .carouseldesktop-section .container .row .img-container {
+        justify-self: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: .2s;
+    }
+    
+    #home .carouseldesktop-section .container .row .img-container:hover {
+        margin-top: -10px
+    }
+    
+    #slider {
+        width: 500px;
+        height: 350px;
+        overflow: hidden;
+    }
+    
+    #slider div {
+        height: 350px;
+        transition: all 1s
+    }
+    
+    #slider>div {
+        width: 2500px;
+        height: 350px;
+        transition: all 1s
+    }
+    
+    #slider>div>div.img-carousel {
+        width: 500px;
+        float: left;
+        height: 350px;
+        border-radius: 5px;
+    }
+    
+    #slider .img-carousel:nth-child(1) {
+        background: url('../../../assets/images/carousel/01.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    #slider .img-carousel:nth-child(2) {
+        background: url('../../../assets/images/carousel/02.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    #slider .img-carousel:nth-child(3) {
+        background: url('../../../assets/images/carousel/03.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    #slider .img-carousel:nth-child(4) {
+        background: url('../../../assets/images/carousel/04.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    #slider .img-carousel:nth-child(5) {
+        background: url('../../../assets/images/carousel/05.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    @media only screen and (max-width: 700px) {
+        #home .carouseldesktop-section {
+            display: none;
+        }
+    }

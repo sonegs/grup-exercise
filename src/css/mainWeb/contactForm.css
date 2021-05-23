@@ -1,10 +1,10 @@
 /* Formulario de contacto*/
 
-#home .section:nth-child(4) .container {
+#home .form-section .container {
     padding-bottom: 0
 }
 
-#home .section:nth-child(4) .container .row {
+#home .form-section .container .row {
     grid-template-columns: 1fr;
     min-height: 400px;
 }

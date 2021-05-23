@@ -26,7 +26,7 @@ require "src/php/functions.php"
         
     </header>
     <div id="home">
-        <div class="section">
+        <div class="section main-section">
             <div class="container">
                 <div class="row">
                     <div class="text-paragraph">
@@ -45,7 +45,7 @@ require "src/php/functions.php"
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section textblocks-section">
             <div class="container">
                 <div class="row">
                     <div class="text-paragraph">
@@ -78,7 +78,7 @@ require "src/php/functions.php"
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section carouseldesktop-section">
             <div class="container">
                 <div class="row">
                     <div class="text-paragraph">
@@ -105,7 +105,7 @@ require "src/php/functions.php"
                 </div>    
             </div>
         </div>
-        <div class="section">
+        <div class="section form-section">
             <div class="container">
                 <div class="row">
                     <form id="ifcontacto" name="fcontacto" method="post">
