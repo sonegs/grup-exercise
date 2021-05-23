@@ -10,12 +10,13 @@ require "src/php/functions.php"
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <link href="./assets/vendor/fontawesome/css/iconos-footer.css" rel="stylesheet">
     
     <title>Miguel Cobo Exercise</title>
 </head>
 <body>
     <header>
-        <div class="title">Pont Grup</div>
+    <img class="lazyload" data-src="assets/images/logo-company.png">
         <div class="contacto">
             <a href="#ifcontacto">Contacto</a>
         </div>
@@ -39,6 +40,8 @@ require "src/php/functions.php"
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="text-paragraph">
@@ -48,7 +51,7 @@ require "src/php/functions.php"
                         </div>
                     </div>
                     <div class="img-container">
-                        <img src="assets/images/mainWeb/motorcycle-black.jpg">
+                        <img class="lazyload" data-src="assets/images/mainWeb/motorcycle-black.jpg">
                     </div>
                 </div>
             </div>
@@ -75,19 +78,22 @@ require "src/php/functions.php"
             <div class="container">
                 <div class="row">
                     <div class="text-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper semper lorem, eget semper neque commodo ut. Vivamus faucibus vehicula mi sed aliquam. Ut et est bibendum, hendrerit ligula ut, gravida
-                            nunc. Aenean bibendum massa id imperdiet semper. Donec pharetra augue sit amet orci condimentum, eget laoreet nisi pulvinar. Aliquam sit amet sem sagittis, rhoncus lacus interdum, vestibulum est. Cras ac diam hendrerit, porta urna
-                            at, efficitur augue. Integer suscipit erat neque, sit amet feugiat augue cursus quis. Quisque efficitur iaculis orci, eu feugiat turpis viverra in. Fusce sit amet tempor leo. Proin sagittis lorem ut erat rhoncus interdum euismod et
-                            metus. Praesent justo tortor, malesuada tincidunt aliquam a, sagittis sit amet nisi. Curabitur faucibus eros ut nisl auctor, eu lacinia purus pharetra. Duis tempor, mauris non sagittis ullamcorper, lectus mauris mollis erat, eu varius
-                            metus nisi et elit. Nullam eget ante nunc.
+                        <div class="text">
+                            <h2>¡Participa en nuestro sorteo!</h2>
+                            <div class="paragraph">
+                            Somos algo más que un seguro de moto, somos tu partner de confianza. Por eso, si traes tu seguro, puedes ganar una de estas motos cada año.
+                            </div>
+                        </div>
                     </div>
                     <div class="img-container">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <div id="slider">
-                                <div>
-                                    <div class="slide" id=red></div>  
-                                    <div class="slide" id=blue></div>  
-                                    <div class="slide" id=green></div>  
+                                <div class="slider-container">
+                                    <div class="img-carousel"></div>
+                                    <div class="img-carousel"></div>
+                                    <div class="img-carousel"></div>
+                                    <div class="img-carousel"></div>
+                                    <div class="img-carousel"></div>
                                 </div>
                             </div>
                         </div>
@@ -100,23 +106,31 @@ require "src/php/functions.php"
                     <div class="row">
                         <form id="ifcontacto" name="fcontacto" method="post">
                             <div class="titulo">Formulario de Contacto</div>
-                            <div class="inline" id="inline">
-                                <input class="cajagr valida-email" id="iemail" name="email" type="text" />
-                                <div class="frase">Indícanos tu dirección de correo electrónico</div>
+                            
+                            <div class="frase">Indícanos tu dirección de correo electrónico</div>
+                            <div class="text-inputs">
+                                <div class="name-input">
+                                    <input class="cajagr" placeholder="Escribe aquí tu nombre" id="nombre" name="nombre" type="text" />
+                                </div>
+                                <div class="email-input">
+                                    <input class="cajagr valida-email" placeholder="Escribe aquí tu email" id="iemail" name="email" type="text" />
+                                </div>
                             </div>
-                            <div class="espaciobtn">
+                            <div class="message-input">
+                                <textarea class="cajagr" placeholder="Envíanos tu consulta..." id="message" name="message" ></textarea>
+                            </div>
+                            <div class="button-send-container">
+                                <div class="checkbox">
+                                    <input class="validate-rgpd" value="1" type="checkbox" id="ilopd" name="aceptar" />
+                                    <span id="span-lopd">Estoy conforme con el Acuerdo de Procesamiento de Datos (RGPD)</span>
+                                </div>
                                 <div id="ibenviar">Recibir en mi email</div>
                             </div>
-                            <div class="checkbox">
-                                <div>
-                                    <input class="validate-rgpd" value="1" type="checkbox" id="ilopd" name="aceptar" />
-                                </div>
-                                <span>Estoy conforme con el Acuerdo de Procesamiento de Datos (RGPD)</span>
-                            </div>
+                            
                         </form>
                     </div>
                     <div id="icorrecto">
-                        <p class="send-message">Tus datos se han enviado correctamente.</p>
+                        <p class="send-message">El email se ha enviado correctamente. Por favor, revisa la bandeja de entrada o la lista de correo no deseado.</p>
                     </div>
                     <div id="ierror">
                         <p class="error-message">Ha habido un problema al enviar el email Por favor, inténtenlo de nuevo.</p>
@@ -126,11 +140,27 @@ require "src/php/functions.php"
         </div>
     </div>
     <footer>
-        <div class="botton-container">
-            <div class="botton">
+        <div class="container">
+            <div class="text-paragraph">
+                <img class="lazyload" data-src="assets/images/logo-company.png">
+            </div>
+        </div>
+        <div class="container">
+            <div class="text-paragraph">
+                <p>Quienes somos</p>
+                <p>Trabaja con nosotros</p>
+                <p>Contacto</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="redes-sociales">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
     <script type="module" src="./src/js/index.js"></script>
 </body>
 

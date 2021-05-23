@@ -1,26 +1,76 @@
 import { fadeoutEffect } from './commons.components.js';
 
 // Valida el campo email y el checkbox LOPD 
-const validarContacto = (email, lopd) => {
+let error_email_visible = false;
+let error_lopd_visible = false;
+let error_name_visible = false;
+let error_message_visible = false;
+
+const mensajeError = (mensaje, validado) => { // Creamos un mensaje de error e indica que el campo no está validado
+    const span = document.createElement('span');
+    const button = document.getElementById('ibenviar');
+    span.id = "error_validacion_email";
+    span.innerHTML = mensaje;
+    button.after(span);
+    fadeoutEffect.fadeOut(document.getElementById('error_validacion_email'), { duration: 5000 }); // Lo hacemos aparecer con el objeto fadeoutEffect
+    validado = false;
+    return validado;
+}
+
+
+const validarContacto = (email, lopd, name, message) => {
     const emailreg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; // expresion regular para validar el email
     let validado = true;
 
     if (email.value == "" || !emailreg.test(email.value)) { // si el email no es correcto o está vacío
-        const span = document.createElement('span'); // Creamos un mensaje de error
-        span.id = "error_validacion_email";
-        span.innerHTML = "Email incorrecto";
-        email.after(span);
-        fadeoutEffect.fadeOut(document.getElementById('error_validacion_email'), { duration: 3000 }); // Lo hacemos aparecer con el objeto fadeoutEffect
-        validado = false;
+        if (!error_email_visible) { // si el mensaje de error aun está visible
+            validado = mensajeError('Email incorrecto', validado);
+            error_email_visible = true;
+
+            setTimeout(() => { // De esta forma, no pueden aparecer los mismos mensajes de error al mismo tiempo
+                error_email_visible = false
+            }, 5000);
+        } else {
+            validado = false;
+        }
     }
 
     if (!lopd.checked) { // Si el checkbox lopd no está marcado
-        const span = document.createElement('span'); // Creamos un mensaje de error
-        span.id = "error_validacion_lopd";
-        span.innerHTML = "Campo obligatorio";
-        lopd.after(span);
-        fadeoutEffect.fadeOut(document.getElementById('error_validacion_lopd'), { duration: 3000 }); // Lo hacemos desaparecer con el objeto fadeoutEffect
-        validado = false;
+        if (!error_lopd_visible) { // si el mensaje de error aun está visible
+            validado = mensajeError('Debe aceptar la LOPD', validado);
+            error_lopd_visible = true;
+
+            setTimeout(() => {
+                error_lopd_visible = false
+            }, 5000);
+        } else {
+            validado = false;
+        }
+    }
+
+    if (name.value == "") { // si el email no es correcto o está vacío
+        if (!error_name_visible) { // si el mensaje de error aun está visible
+            validado = mensajeError('El nombre no es válido', validado);
+            error_name_visible = true;
+
+            setTimeout(() => {
+                error_name_visible = false
+            }, 5000);
+        } else {
+            validado = false;
+        }
+    }
+
+    if (message.value == "") { // si el email no es correcto o está vacío
+        if (!error_message_visible) { // si el mensaje de error aun está visible
+            validado = mensajeError('El mensaje no es válido', validado);
+            error_message_visible = true;
+            setTimeout(() => {
+                error_message_visible = false
+            }, 5000);
+        } else {
+            validado = false;
+        }
     }
     return validado;
 }
@@ -33,8 +83,10 @@ export const enviaEmailContacto = () => {
 
         const emailInput = document.getElementById("iemail");
         const lopdInput = document.getElementById("ilopd");
+        const nameInput = document.getElementById("nombre");
+        const messageInput = document.getElementById("message");
 
-        if (validarContacto(emailInput, lopdInput)) {
+        if (validarContacto(emailInput, lopdInput, nameInput, messageInput)) {
             const request = new XMLHttpRequest();
 
             request.open('POST', 'src/php/sendEmail.php', true); // Abre el archivo sendEmail.php
@@ -46,6 +98,7 @@ export const enviaEmailContacto = () => {
                     if (request.status == 200) {
                         const correct = document.getElementById("icorrecto");
                         correct.style.display = "block"; // Mostramos el mensaje de Envío correcto
+                        fadeoutEffect.fadeOut(document.getElementById('ifcontacto'), { duration: 1000 });
                     } else {
                         const fail = document.getElementById("ierror");
                         fail.style.display = "block"; // Mostramos el mensaje de envío fallido

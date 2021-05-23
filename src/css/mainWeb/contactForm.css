@@ -1,0 +1,130 @@
+/* Formulario de contacto*/
+
+#home .section:nth-child(4) .container .row {
+    grid-template-columns: 1fr;
+    min-height: 400px;
+}
+
+#home #ifcontacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .3fr .5fr 1fr .5fr;
+    padding: 30px 0px 30px 50px;
+}
+
+#home #ifcontacto .titulo {
+    font-size: 40px;
+    align-self: end;
+}
+
+#home #ifcontacto .frase {
+    font-size: 22px;
+    align-self: center;
+}
+
+#home #ifcontacto .text-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+}
+
+#home #ifcontacto .name-input .cajagr,
+#home #ifcontacto .email-input .cajagr {
+    width: 500px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+    color: grey;
+}
+
+#home #ifcontacto .message-input .cajagr {
+    width: 1100px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+    color: grey;
+}
+
+#home #ifcontacto .name-input .cajagr::placeholder,
+#home #ifcontacto .email-input .cajagr::placeholder {
+    font-size: 22px;
+    line-height: 40px;
+    color: #b8b8b8
+}
+
+#home #ifcontacto .message-input .cajagr::placeholder {
+    font-size: 22px;
+    line-height: 40px;
+    color: #b8b8b8;
+    overflow-wrap: break-word
+}
+
+#home #ifcontacto .button-send-container {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#error_validacion_email,
+#error_validacion_lopd,
+#error_validacion_name,
+#error_validacion_message {
+    background-color: indianred;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px
+}
+
+#home #ifcontacto span {
+    padding-left: 10px;
+    font-size: 20px
+}
+
+#home #ifcontacto .checkbox .validate-rgpd {
+    width: 20px;
+    height: 20px;
+}
+
+#ibenviar {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 20px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #666;
+    color: #fff;
+    text-transform: none;
+    outline: 0;
+    font-size: 23px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#icorrecto,
+#ierror {
+    display: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 22px;
+    border: none;
+    color: white
+}
+
+#icorrecto {
+    background-color: #4caf50;
+}
+
+#ierror {
+    background-color: indianred;
+}
+
+@media only screen and (min-width: 200px) {}
+
+@media only screen and (min-width: 800px) {}
+
+@media only screen and (min-width: 1200px) {}

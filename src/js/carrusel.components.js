@@ -2,20 +2,27 @@
 
 let margin = 0;
 
-const sliderDivSon = document.querySelector('#slider>div');
-const move = () => { // Desplazamiento del carrusel
-    margin = (margin + 400) % 1200
-    sliderDivSon.style['margin-left'] = '-' + margin + 'px'
+
+const sliderTextContainerSon = document.querySelector('#slider>div');
+const sliderImagesSon = document.querySelector('#slider>div');
+const move = element => { // Desplazamiento del carrusel
+    const widthImage = 500;
+    const numImages = 5;
+    console.log(element);
+    margin = (margin + widthImage) % (widthImage * numImages); // margin a mover, dividido por el ancho total del div padre slider. Si queremos añadir más imágenes, solo debemos multiplicar el ancho de cada imagen por el número de imágenes
+    element.style['margin-left'] = '-' + margin + 'px';
 }
 
-export const moveCarousel = () => { // mueve el carrusel de forma automatica
+export const moveCarousel = () => { // mueve el carrusel de forma automatica en escritorio
+
     setInterval(() => {
-        move();
-    }, 5 * 1000);
+        move(sliderImagesSon);
+    }, 4 * 1000);
 }
 
-export const clickSlider = () => { // desplaza el carrusel al hacer click
+export const clickSlider = () => { // desplaza el carrusel al tapear en moviles
+
     document.getElementById('slider').addEventListener('click', () => {
-        move();
+        move(sliderImagesSon);
     });
 }

@@ -1,0 +1,28 @@
+/* Header */
+
+header {
+    background-color: #58517a;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header .contacto {
+    padding: 10px;
+    justify-self: right;
+    transition: .1s;
+    align-self: center;
+    font-size: 21px;
+}
+
+header .contacto:hover {
+    margin-top: -8px
+}
+
+header .title,
+header .contacto a,
+header .contacto a:active,
+header .contacto a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
