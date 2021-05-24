@@ -7,11 +7,11 @@ export const menu_mobile = () => {
                 document.getElementById('rowMobile').style.display = 'none';
                 visible = false;
             } else { // creamos el submenu contacto para movil
-                const header = document.getElementsByTagName('header');
+                const header = document.querySelector("header");
                 const menuRow = document.createElement('div');
                 menuRow.id = 'rowMobile';
                 menuRow.innerHTML = '<a href="#ifcontacto">Contacto</a>';
-                header[0].after(menuRow);
+                header.after(menuRow);
                 visible = true
             }
         });

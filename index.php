@@ -110,11 +110,10 @@ require "src/php/functions.php"
                 <div class="row">
                     <form id="ifcontacto" name="fcontacto" method="post">
                         <div class="titulo">Formulario de Contacto</div>
-                            
-                        <div class="frase">Indícanos tu dirección de correo electrónico</div>
+                        <div class="frase">Puedes enviarnos un comentario a través de este formulario.</div>
                         <div class="text-inputs">
                             <div class="name-input">
-                                <input class="cajagr" placeholder="Escribe aquí tu nombre" id="nombre" name="nombre" type="text" />
+                                <input class="cajagr" placeholder="Escribe aquí tu nombre" id="nombre" name="name" type="text" />
                             </div>
                             <div class="email-input">
                                 <input class="cajagr valida-email" placeholder="Escribe aquí tu email" id="iemail" name="email" type="text" />

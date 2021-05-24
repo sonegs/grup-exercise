@@ -1,6 +1,6 @@
 import { fadeoutEffect } from './commons.components.js';
 
-// Valida el campo email y el checkbox LOPD 
+// Valida los campos del formulario 
 let error_email_visible = false;
 let error_lopd_visible = false;
 let error_name_visible = false;
@@ -18,7 +18,7 @@ const mensajeError = (mensaje, validado) => { // Creamos un mensaje de error e i
 }
 
 
-const validarContacto = (email, lopd, name, message) => {
+const validarContacto = (email, lopd, name, message) => { // Valida el formulario de contacto
     const emailreg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; // expresion regular para validar el email
     let validado = true;
 

@@ -6,7 +6,7 @@ import { menu_mobile } from './menuMobile.components.js';
 
 
 lazyload();
-//(isMobile.any()) ? clickSlider(): moveCarousel();
+//(isMobile.any()) ? clickSlider(): moveCarousel(); 
 clickSlider()
 enlaceOfuscado();
 enviaEmailContacto();
