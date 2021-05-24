@@ -1,5 +1,11 @@
 /* License - https: //fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)*/
 
+
+/* Modified - Miguel Cobo
+En este archivo se encuentran solo los iconos utilizados en nuestra web.
+De esta forma, solo obtenemos los iconos necesarios para nuestra webapp 
+y no cargamos código que no va a usarse, reduciendo la carga de la web */
+
 .fa,
 .fab,
 .fad,

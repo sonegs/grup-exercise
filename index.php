@@ -128,7 +128,7 @@ require "src/php/functions.php"
                             <span id="span-lopd">Estoy conforme con el Acuerdo de Procesamiento de Datos (RGPD)</span>
                         </div>
                         <div class="button-send-container">
-                            <div id="ibenviar">Recibir en mi email</div>
+                            <div id="ibenviar">Enviar mensaje</div>
                         </div>
                             
                     </form>
