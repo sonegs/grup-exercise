@@ -1,19 +1,38 @@
 export const menu_mobile = () => {
-    const menu_mobile = document.getElementsByClassName('menu-mobile');
+    let menu_mobile = document.getElementsByClassName('menu-mobile');
     let visible = false;
-    for (let menu of menu_mobile) {
+    menu_mobile = [...menu_mobile]; // transformamos el objeto en array para poder iterar
+    const header = document.querySelector("header");
+
+    menu_mobile.map(menu => {
         menu.addEventListener("click", () => {
+
             if (visible) { // Si el submenu contacto está visible, desaparece
-                document.getElementById('rowMobile').style.display = 'none';
+
+                const toggleMenuMobile = document.querySelector('.toggle-menuMobile');
+                toggleMenuMobile.style.opacity = '0'; // Damos efecto al menu
+
+                setTimeout(() => { header.removeChild(toggleMenuMobile); }, 500); // Eliminamos el menu
+
                 visible = false;
+
             } else { // creamos el submenu contacto para movil
-                const header = document.querySelector("header");
-                const menuRow = document.createElement('div');
-                menuRow.id = 'rowMobile';
-                menuRow.innerHTML = '<a href="#ifcontacto">Contacto</a>';
-                header.after(menuRow);
+
+                const toggleMenuMobile = document.createElement('div'); // Div que almacena cada fila del menu
+                toggleMenuMobile.className = 'toggle-menuMobile';
+
+                const rowContact = document.createElement('div'); // Fila de contacto
+                rowContact.className = 'rowMobile';
+                rowContact.innerHTML = '<a href="#ifcontacto">Contacto</a>';
+
+                header.appendChild(toggleMenuMobile); // Imprimimos el menú
+                toggleMenuMobile.appendChild(rowContact);
+                setTimeout(() => rowContact.classList.add("animate"), 100);
+
                 visible = true
+
             }
         });
-    }
+    })
+
 }

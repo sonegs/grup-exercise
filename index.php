@@ -45,34 +45,36 @@ require "src/php/functions.php"
                 </div>
             </div>
         </div>
-        <div class="section textblocks-section">
-            <div class="container">
-                <div class="row">
-                    <div class="text-paragraph">
-                        <div class="text">
-                            <a href="#ifcontacto"><h2>El seguro más motero</h2></a> 
-                            <div class="paragraph">Las motos no son un vehículo más, y tu seguro tampoco puede serlo. Fieles a esta idea, trabajamos diariamente para poder ofrecerte seguros de moto que se adapten a tus necesidades al mejor precio, con un servicio eficaz.</div>
+        <div id="textblocks-section" class="section">
+            <div class="slider-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-paragraph">
+                            <div class="text">
+                                <a href="#ifcontacto"><h2>El seguro más motero</h2></a> 
+                                <div class="paragraph">Las motos no son un vehículo más, y tu seguro tampoco puede serlo. Fieles a esta idea, trabajamos diariamente para poder ofrecerte seguros de moto que se adapten a tus necesidades al mejor precio, con un servicio eficaz.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="img-container">
-                        <img class="lazyload" data-src="assets/images/mainWeb/motorcycle-black.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="text-paragraph">
-                        <div class="text">
-                            <a href=""><h2>Compara nuestros servicios</h2></a> <div class="paragraph">Accede a nuestro comparador de seguros de motos y, en menos de un minuto, elige entre las mejores alternativas del mercado. ¡Te garantizamos un seguro de moto con todos los servicios que nadie te ofrece!</div>
+                        <div class="img-container">
+                            <img class="lazyload" data-src="assets/images/mainWeb/motorcycle-black.jpg">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="text-paragraph">
-                        <div class="text">
-                            <a href=""><h2>Seguro de moto a medida</h2></a> <div class="paragraph">Para poder seleccionar la mejor oferta en seguros para motos, es importante comparar los precios y las coberturas que incluye cada compañía y así analizar cuál es el mejor seguro que puedes tener para tu moto, el que mejor se adapte a lo que buscas. El tipo de moto también puede ser un elemento importante a la hora de obtener tu póliza. Piensa por ejemplo que, un seguro de ciclomotor, tendrá diferentes precios que un seguro para scooters.</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="text-paragraph">
+                            <div class="text">
+                                <a href=""><h2>Compara nuestros servicios</h2></a> <div class="paragraph">Accede a nuestro comparador de seguros de motos y, en menos de un minuto, elige entre las mejores alternativas del mercado. ¡Te garantizamos un seguro de moto con todos los servicios que nadie te ofrece!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="text-paragraph">
+                            <div class="text">
+                                <a href=""><h2>Seguro de moto a medida</h2></a> <div class="paragraph">Para poder seleccionar la mejor oferta en seguros para motos, es importante comparar los precios y las coberturas que incluye cada compañía y así analizar cuál es el mejor seguro que puedes tener para tu moto, el que mejor se adapte a lo que buscas. El tipo de moto también puede ser un elemento importante a la hora de obtener tu póliza. Piensa por ejemplo que, un seguro de ciclomotor, tendrá diferentes precios que un seguro para scooters.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
