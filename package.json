@@ -1,16 +1,27 @@
 {
-    "name": "landing-html-css-js",
+    "name": "grup-exercise",
     "version": "1.0.0",
-    "description": "",
+    "description": "Los pasos para arrancar el proyecto son los siguientes:",
     "main": "index.js",
     "scripts": {
-        "cy:test": "node_modules/.bin/cypress open"
+        "start": "parcel ./index.html --open"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sonegs/grup-exercise.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "dependencies": {},
+    "bugs": {
+        "url": "https://github.com/sonegs/grup-exercise/issues"
+    },
+    "homepage": "https://github.com/sonegs/grup-exercise#readme",
+    "dependencies": {
+        "parcel": "*",
+        "swiper": "^6.7.0"
+    },
     "devDependencies": {
-        "cypress": "^7.3.0"
+        "parcel-plugin-lazy": "^0.0.4"
     }
 }

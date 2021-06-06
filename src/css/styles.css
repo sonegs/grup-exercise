@@ -1,3 +1,4 @@
+@import '../assets/vendor/fontawesome/css/iconos-footer.css';
 @import './commons/header.css';
 @import './mainWeb/sections.css';
 @import './mainWeb/carousel.css';
@@ -12,3 +13,6 @@ body {
     margin: 0px;
     font-family: sans-serif;
 }
+
+
+/* Fin de los contenedores de texto */

@@ -11,6 +11,7 @@ export const menu_mobile = () => {
 
                 const toggleMenuMobile = document.querySelector('.toggle-menuMobile');
                 toggleMenuMobile.style.opacity = '0'; // Damos efecto al menu
+                toggleMenuMobile.style.marginTop = '25px'; // Damos efecto al menu
 
                 setTimeout(() => { header.removeChild(toggleMenuMobile); }, 500); // Eliminamos el menu
 
@@ -26,8 +27,9 @@ export const menu_mobile = () => {
                 rowContact.innerHTML = '<a href="#ifcontacto">Contacto</a>';
 
                 header.appendChild(toggleMenuMobile); // Imprimimos el menú
-                toggleMenuMobile.appendChild(rowContact);
-                setTimeout(() => rowContact.classList.add("animate"), 100);
+                toggleMenuMobile.appendChild(rowContact); // imprimimos la fila de Contacto
+
+                setTimeout(() => toggleMenuMobile.classList.add("animate"), 50); // le damos la clase Animate, encargada de dar efecto fadeIn
 
                 visible = true
 

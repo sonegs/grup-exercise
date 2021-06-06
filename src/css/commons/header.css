@@ -49,17 +49,18 @@
         header .toggle-menuMobile {
             position: absolute;
             width: 100%;
-            margin-top: 45px;
-            opacity: 1;
+            opacity: 0;
             -webkit-transition: opacity 300ms linear;
             transition: opacity 300ms linear;
             transition: 1s;
+            overflow: hidden;
+            margin-top: 25px;
         }
-        header .rowMobile.animate {
-            transform: scale(1);
+        header .toggle-menuMobile.animate {
+            margin-top: 45px;
+            opacity: 1;
         }
         header .rowMobile {
-            transform: scale(0);
             transition: 0.3s;
             width: 100%;
             height: 50px;
