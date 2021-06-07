@@ -22,5 +22,5 @@ window.addEventListener("resize", detectWidth);
 LazyLoad();
 enlaceOfuscado();
 enviaEmailContacto();
-menu_mobile();acto();
+
 menu_mobile();
