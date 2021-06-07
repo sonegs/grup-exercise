@@ -19,7 +19,8 @@ detectWidth();
 
 window.addEventListener("resize", detectWidth);
 
-lazyload();
+LazyLoad();
 enlaceOfuscado();
 enviaEmailContacto();
+menu_mobile();acto();
 menu_mobile();
