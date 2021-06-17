@@ -19,7 +19,7 @@ detectWidth();
 
 window.addEventListener("resize", detectWidth);
 
-LazyLoad();
+new LazyLoad();
 enlaceOfuscado();
 enviaEmailContacto();
 
